@@ -1,22 +1,25 @@
-function kalkulator(a,b,c){
-    function wynik(a,b,c){
-        if (c === '+'){
+class Kalkulator {
+    static wynik(a, b, c) {
+        if (c === '+') {
             return a + b;
-        } else if (c === '-'){
+        } else if (c === '-') {
             return a - b;
-        } else if (c === '*'){
+        } else if (c === '*') {
             return a * b;
-        } else if (c === '/'){
-            if (b === 0){
-                console.log("nie mozna dzielić przez 0");
-            } else{
+        } else if (c === '/') {
+            if (b === 0) {
+                console.log("Nie można dzielić przez zero");
+            } else {
                 return a / b;
             }
         } else {
-          console.log("niepoprawny znak");
+            console.log("Niepoprawny znak");
         }
     }
-  return wynik(a, b, c);
+
+    static oblicz(a, b, c) {
+        return this.wynik(a, b, c);
+    }
 }
 
-console.log(kalkulator(231, 0, '/'));
+console.log(Kalkulator.oblicz(231, 0, '/'));
