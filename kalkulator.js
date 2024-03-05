@@ -26,20 +26,19 @@
 
 class Kalkulator{
 
-    dodaj(a, b) {
+    sum(a, b) {
         return a + b;
-
     }
 
-    odejmij(a, b){
+    subtract(a, b) {
         return a - b;
     }
 
-    pomnóż(a, b){
+    multiplication(a, b) {
         return a * b;
     }
 
-    podziel(a, b){
+    divide(a, b) {
         if(b === 0) {
             console.log("nie można dzielić przez 0");
         } else {
@@ -47,12 +46,30 @@ class Kalkulator{
         }
     }
 
+    static countSum(a, b) {
+        const kalkulator = new Kalkulator();
+        return kalkulator.sum(a, b);
+    }
+
+    static countSubtract(a, b) {
+        const kalkulator = new Kalkulator();
+        return kalkulator.subtract(a, b);
+    }
+
+    static countMultiplication(a ,b) {
+        const kalkulator = new Kalkulator();
+        return kalkulator.multiplication(a, b);
+    }
+
+    static countDivide(a, b) {
+        const kalkulator = new Kalkulator();
+        return kalkulator.divide(a, b);
+    }
+
 }
 
-const kalkulator = new Kalkulator();
-
-console.log(kalkulator.dodaj(4, 5));
-console.log(kalkulator.odejmij(3, 6));
-console.log(kalkulator.pomnóż(3, 7));
-console.log(kalkulator.podziel(10, 2))
-console.log(kalkulator.podziel(12, 0));
+console.log(Kalkulator.countSum(4, 5));
+console.log(Kalkulator.countSubtract(3, 6));
+console.log(Kalkulator.countMultiplication(3, 7));
+console.log(Kalkulator.countDivide(10, 2));
+console.log(Kalkulator.countDivide(12, 0));
