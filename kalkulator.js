@@ -72,3 +72,5 @@ ipolicz.addEventListener('click', function (e){
    
     return false;
 })
+
+// przekrztalcić klase aby miała prywatnąmetode do przekrztałcania liczb a i b która będzie wykonywana w karzdej funkcji
